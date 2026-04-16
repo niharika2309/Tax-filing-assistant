@@ -1,0 +1,58 @@
+{
+  "tax_year": 2025,
+  "source": "Rev. Proc. 2024-40, IRS 2025 inflation adjustments",
+  "standard_deduction": {
+    "single": "15000.00",
+    "married_filing_jointly": "30000.00",
+    "married_filing_separately": "15000.00",
+    "head_of_household": "22500.00",
+    "qualifying_surviving_spouse": "30000.00"
+  },
+  "brackets": {
+    "single": [
+      {"rate": 0.10, "from": "0",      "to": "11925"},
+      {"rate": 0.12, "from": "11925",  "to": "48475"},
+      {"rate": 0.22, "from": "48475",  "to": "103350"},
+      {"rate": 0.24, "from": "103350", "to": "197300"},
+      {"rate": 0.32, "from": "197300", "to": "250525"},
+      {"rate": 0.35, "from": "250525", "to": "626350"},
+      {"rate": 0.37, "from": "626350", "to": null}
+    ],
+    "married_filing_jointly": [
+      {"rate": 0.10, "from": "0",      "to": "23850"},
+      {"rate": 0.12, "from": "23850",  "to": "96950"},
+      {"rate": 0.22, "from": "96950",  "to": "206700"},
+      {"rate": 0.24, "from": "206700", "to": "394600"},
+      {"rate": 0.32, "from": "394600", "to": "501050"},
+      {"rate": 0.35, "from": "501050", "to": "751600"},
+      {"rate": 0.37, "from": "751600", "to": null}
+    ],
+    "married_filing_separately": [
+      {"rate": 0.10, "from": "0",      "to": "11925"},
+      {"rate": 0.12, "from": "11925",  "to": "48475"},
+      {"rate": 0.22, "from": "48475",  "to": "103350"},
+      {"rate": 0.24, "from": "103350", "to": "197300"},
+      {"rate": 0.32, "from": "197300", "to": "250525"},
+      {"rate": 0.35, "from": "250525", "to": "375800"},
+      {"rate": 0.37, "from": "375800", "to": null}
+    ],
+    "head_of_household": [
+      {"rate": 0.10, "from": "0",      "to": "17000"},
+      {"rate": 0.12, "from": "17000",  "to": "64850"},
+      {"rate": 0.22, "from": "64850",  "to": "103350"},
+      {"rate": 0.24, "from": "103350", "to": "197300"},
+      {"rate": 0.32, "from": "197300", "to": "250500"},
+      {"rate": 0.35, "from": "250500", "to": "626350"},
+      {"rate": 0.37, "from": "626350", "to": null}
+    ],
+    "qualifying_surviving_spouse": [
+      {"rate": 0.10, "from": "0",      "to": "23850"},
+      {"rate": 0.12, "from": "23850",  "to": "96950"},
+      {"rate": 0.22, "from": "96950",  "to": "206700"},
+      {"rate": 0.24, "from": "206700", "to": "394600"},
+      {"rate": 0.32, "from": "394600", "to": "501050"},
+      {"rate": 0.35, "from": "501050", "to": "751600"},
+      {"rate": 0.37, "from": "751600", "to": null}
+    ]
+  }
+}
