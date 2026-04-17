@@ -1,6 +1,10 @@
 # Tax Filing Assistant
 
-A local-first tax filing assistant for 2025 returns, built for product launch and developer demos.
+![Tax Filing Assistant — Form 1040 preview](assets/screenshot.png)
+
+A local-first tax filing assistant for 2025 returns.
+
+> **View the full HTML readme:** [htmlpreview.github.io/?https://github.com/niharika2309/Tax-filing-assistant/blob/main/README.html](https://htmlpreview.github.io/?https://github.com/niharika2309/Tax-filing-assistant/blob/main/README.html)
 
 This app uses a local LM Studio instance with Qwen-style models and a tool-driven backend to parse W-2s, apply IRS rules, compute deductions, and render a Form 1040 preview.
 
