@@ -16,6 +16,9 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from io import BytesIO
 
+import shutil
+import sys
+
 import pdfplumber
 import pypdfium2 as pdfium
 import pytesseract
@@ -27,7 +30,11 @@ from app.ingest.w2_extractor import ExtractionResult, extract_w2_fields, require
 OCR_DPI = 300
 PDFPLUMBER_CONFIDENCE_THRESHOLD = 0.45
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+_tesseract_path = shutil.which("tesseract")
+if _tesseract_path:
+    pytesseract.pytesseract.tesseract_cmd = _tesseract_path
+elif sys.platform == "win32":
+    pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 
 

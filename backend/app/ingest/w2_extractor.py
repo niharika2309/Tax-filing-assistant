@@ -24,9 +24,11 @@ _MONEY_RE = r"\$?\s*\(?-?\s*(?:\d{1,3}(?:,\d{3})+(?:\.\d{1,2})?|\d+\.\d{1,2}|\d{
 # "Box 1" matches before a bare "1".
 _BOX_LABELS: dict[str, list[str]] = {
     "wages": [
-        r"1\s+wages,?\s+tips,?\s+other\s+compensation",
+        r"1\s+wages,?\s+tips,?\s+other\s*comp(?:ensation)?",
         r"box\s*1\s*[:.-]?\s*wages",
-        r"wages,?\s+tips,?\s+other\s+compensation",
+        r"wages,?\s+tips,?\s+other\s*comp(?:ensation)?",
+        r"1\s+wages,?\s+tips,?\s+other",
+        r"wages,?\s+tips,?\s+other",
     ],
     "federal_income_tax_withheld": [
         r"2\s+federal\s+income\s+tax\s+withheld",

@@ -17,8 +17,8 @@ def compute_std_deduction(filing_status: FilingStatus, tax_year: int) -> Money:
     return Money(raw)
 
 
-_SALT_CAP_FULL = Money("10000.00")
-_SALT_CAP_MFS = Money("5000.00")
+_SALT_CAP_FULL = Money("40000.00")
+_SALT_CAP_MFS = Money("20000.00")
 
 
 def compute_itemized_deduction(
@@ -28,7 +28,7 @@ def compute_itemized_deduction(
 ) -> ScheduleA:
     """Aggregate itemized entries into a Schedule A summary.
 
-    Applies the SALT cap ($10k / $5k MFS) to the combined state_local_tax +
+    Applies the SALT cap ($40k / $20k MFS) to the combined state_local_tax +
     real_estate_tax bucket, since that's the one non-obvious rule worth enforcing
     at the tool layer.
     """

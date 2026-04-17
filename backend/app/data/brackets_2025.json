@@ -1,12 +1,12 @@
 {
   "tax_year": 2025,
-  "source": "Rev. Proc. 2024-40, IRS 2025 inflation adjustments",
+  "source": "Rev. Proc. 2024-40 and subsequent 2025 legislative inflation adjustments",
   "standard_deduction": {
-    "single": "15000.00",
-    "married_filing_jointly": "30000.00",
-    "married_filing_separately": "15000.00",
-    "head_of_household": "22500.00",
-    "qualifying_surviving_spouse": "30000.00"
+    "single": "15750.00",
+    "married_filing_jointly": "31500.00",
+    "married_filing_separately": "15750.00",
+    "head_of_household": "23625.00",
+    "qualifying_surviving_spouse": "31500.00"
   },
   "brackets": {
     "single": [

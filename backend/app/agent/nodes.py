@@ -14,7 +14,7 @@ from app.agent.prompts import RETRY_PROMPT, SYSTEM_PROMPT
 from app.agent.state import AgentState
 from app.schemas.deductions import ItemizedEntry, ScheduleA
 from app.schemas.documents import ParsedDocument
-from app.schemas.enums import DeductionType, ItemizedCategory
+from app.schemas.enums import DeductionType, FilingStatus, ItemizedCategory
 from app.schemas.money import Money
 from app.schemas.return_ import TaxReturn
 from app.settings import settings

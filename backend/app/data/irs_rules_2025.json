@@ -7,11 +7,11 @@
       "summary": "The standard deduction reduces taxable income by a fixed amount based on filing status. For 2025, amounts were adjusted for inflation per Rev. Proc. 2024-40.",
       "citation": "Rev. Proc. 2024-40, IRC §63(c)",
       "values": {
-        "single": "15000.00",
-        "married_filing_jointly": "30000.00",
-        "married_filing_separately": "15000.00",
-        "head_of_household": "22500.00",
-        "qualifying_surviving_spouse": "30000.00"
+        "single": "15750.00",
+        "married_filing_jointly": "31500.00",
+        "married_filing_separately": "15750.00",
+        "head_of_household": "23625.00",
+        "qualifying_surviving_spouse": "31500.00"
       }
     },
     {
@@ -35,11 +35,23 @@
     {
       "topic": "itemized_salt_cap",
       "title": "SALT Deduction Cap (Schedule A)",
-      "summary": "State and local tax deduction is capped at $10,000 ($5,000 if MFS) combined across income/sales and property taxes. Cap remains in effect for 2025.",
-      "citation": "IRC §164(b)(6), TCJA as extended",
+      "summary": "State and local tax deduction is capped at $40,000 for 2025 ($20,000 if MFS) combined across income/sales and property taxes.",
+      "citation": "IRC §164(b)(6), 2025 legislative update",
       "values": {
-        "cap_mfj_single_hoh": "10000.00",
-        "cap_mfs": "5000.00"
+        "cap_mfj_single_hoh": "40000.00",
+        "cap_mfs": "20000.00"
+      }
+    },
+    {
+      "topic": "senior_bonus_deduction",
+      "title": "2025 Senior Bonus Deduction",
+      "summary": "Taxpayers age 65 or older may qualify for an additional deduction on top of the regular standard deduction. The bonus begins phasing out at $75,000 AGI for single filers and $150,000 AGI for joint filers.",
+      "citation": "IRS Revenue Procedure 2024-40 and 2025 legislative adjustment",
+      "values": {
+        "bonus_amount_single": "6000.00",
+        "bonus_amount_joint": "6000.00",
+        "phaseout_single_start": "75000.00",
+        "phaseout_joint_start": "150000.00"
       }
     },
     {
