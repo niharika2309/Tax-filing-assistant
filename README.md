@@ -4,8 +4,6 @@
 
 A local-first tax filing assistant for 2025 returns.
 
-> **View the full HTML readme:** [htmlpreview.github.io/?https://github.com/niharika2309/Tax-filing-assistant/blob/main/README.html](https://htmlpreview.github.io/?https://github.com/niharika2309/Tax-filing-assistant/blob/main/README.html)
-
 This app uses a local LM Studio instance with Qwen-style models and a tool-driven backend to parse W-2s, apply IRS rules, compute deductions, and render a Form 1040 preview.
 
 ---
@@ -143,8 +141,6 @@ This product is built to demonstrate an end-to-end local LLM experience.
 [▶ Watch the demo](assets/demo.mov)
 
 *Full demo: upload W-2 → agent runs tools → Form 1040 preview rendered locally*
-
-> See [README.html](README.html) for the full HTML version with embedded video player.
 
 ---
 
