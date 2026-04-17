@@ -130,15 +130,9 @@ This product is built to demonstrate an end-to-end local LLM experience.
 
 ## 🎬 Media
 
-### Screenshot
-
-![Tax Filing Assistant — Form 1040 preview](assets/screenshot.png)
-
-*Form 1040 preview panel with live agent tool call timeline after W-2 upload*
-
 ### Demo recording
 
-[▶ Watch the demo](assets/demo.mov)
+[![▶ Watch the demo on YouTube](https://img.youtube.com/vi/KKgYsWP2RBA/maxresdefault.jpg)](https://youtu.be/KKgYsWP2RBA)
 
 *Full demo: upload W-2 → agent runs tools → Form 1040 preview rendered locally*
 
