@@ -122,22 +122,25 @@ This product is built to demonstrate an end-to-end local LLM experience.
 - Local inference via LM Studio
 - No OpenAI / Azure / remote LLM calls
 - Works with Qwen2.5-7B-Instruct or Qwen7B locally
-- Easy to demo on Product Hunt with privacy-first architecture
+- Easy to demo locally with a privacy-first architecture
 
 ---
 
-## 🎬 Product hunt media
+## 🎬 Media
 
-### Screenshots
+### Screenshot
 
-- **Screenshot 1**: Upload flow and W-2 capture
-- **Screenshot 2**: Tool call timeline and live agent responses
-- **Screenshot 3**: Form 1040 preview with deduction summary
+![Tax Filing Assistant — Form 1040 preview](assets/screenshot.png)
 
-### One-minute demo video
+*Form 1040 preview panel with live agent tool call timeline after W-2 upload*
 
-- Outline: upload W-2, run agent, show final Form 1040 preview
-- Keep it short, local-first, and highlight the LM Studio model
+### Demo recording
+
+[▶ Watch the demo](assets/demo.mov)
+
+*Full demo: upload W-2 → agent runs tools → Form 1040 preview rendered locally*
+
+> See [README.html](README.html) for the full HTML version with embedded video player.
 
 ---
 
@@ -200,9 +203,9 @@ Or use the helper script:
 
 ---
 
-## ✅ Notes for Product Hunt
+## ✅ Highlights
 
-- Local-first demo, no cloud LLM calls
+- Local-first, no cloud LLM calls
 - Built for real tax workflow validation
 - Includes rule-driven tax bracket and deduction logic
 - Great for developers who want a local agent + backend toolchain
