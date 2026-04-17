@@ -85,19 +85,69 @@ Rule data and tax brackets are stored locally in:
 ## 🧩 System design
 
 ```mermaid
-flowchart LR
-  A[Browser UI] -->|upload W-2| B[FastAPI Backend]
-  B --> C[Session + Storage]
-  B --> D[LangGraph Agent]
-  D --> E[Tool registry]
-  E --> F[W-2 ingest pipeline]
-  E --> G[Rule lookup]
-  E --> H[Standard deduction / tax calc]
-  E --> I[Form 1040 generator]
-  D -->|stream events| A
-  D --> J[LM Studio Qwen model]
-  F --> K[Tesseract OCR / pdfplumber]
-  C -->|persist| L[SQLite + pdf files]
+graph TB
+    subgraph FE ["🖥️  Frontend · Next.js"]
+        Upload["Upload W-2"]
+        Chat["Chat Pane"]
+        Preview["Form 1040 Preview"]
+    end
+
+    subgraph BE ["⚙️  Backend · FastAPI + LangGraph"]
+        API["REST / SSE Endpoints"]
+        Agent["LangGraph Agent"]
+        LLM["LM Studio — Qwen2.5-7B"]
+    end
+
+    subgraph TK ["🛠️  Tool Registry"]
+        direction LR
+        P["parse_w2"] --> R["irs_rules"] --> D["deduction"] --> T["tax_calc"] --> G["form_1040"]
+    end
+
+    subgraph ST ["💾  Storage"]
+        DB[("SQLite")]
+        Files["PDF Store"]
+    end
+
+    Upload -->|"W-2 PDF"| API
+    Chat -->|"user message"| API
+    API --> Agent
+    Agent <-->|"tool calls"| TK
+    Agent <-->|"inference"| LLM
+    Agent -.->|"SSE stream"| Preview
+    TK --- ST
+```
+
+---
+
+## 👤 User story
+
+```mermaid
+sequenceDiagram
+    actor User
+    participant UI as Browser UI
+    participant API as FastAPI
+    participant Agent as LangGraph Agent
+    participant LLM as LM Studio
+    participant Tools as Tool Registry
+
+    User->>UI: Drop W-2 PDF
+    UI->>API: POST /sessions/{id}/documents
+    API->>Tools: parse_w2_tool(pdf)
+    Tools-->>UI: W-2 data extracted ✓
+
+    User->>UI: "married, filing separately"
+    UI->>API: POST /sessions/{id}/chat (SSE)
+    API->>Agent: dispatch message
+
+    loop Agent reasoning loop
+        Agent->>LLM: reason + select next tool
+        LLM-->>Agent: call [tool_name]
+        Agent->>Tools: execute tool
+        Tools-->>Agent: structured result
+    end
+
+    Agent-->>UI: stream tool events + Form 1040 payload
+    UI-->>User: Form 1040 READY · refund / owed shown
 ```
 
 ---
